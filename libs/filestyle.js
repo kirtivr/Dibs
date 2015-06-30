@@ -1,0 +1,95 @@
+/*
+ * Style File - jQuery plugin for styling file input elements
+ *  
+ * Copyright (c) 2007-2008 Mika Tuupola
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Based on work by Shaun Inman
+ *   http://www.shauninman.com/archive/2007/09/10/styling_file_inputs_with_css_and_the_dom
+ *
+ * Revision: $Id: jquery.filestyle.js 303 2008-01-30 13:53:24Z tuupola $
+ *
+ */
+
+(function($) {
+    
+    $.fn.filestyle = function(options) {
+                
+        /* TODO: This should not override CSS. */
+        var settings = {
+            width : 250
+        };
+                
+        if(options) {
+            $.extend(settings, options);
+        };
+                        
+        return this.each(function() {
+            
+            var self = this;
+            var wrapper = $("<div>")
+                            .css({
+                                "width": settings.imagewidth + "px",
+                                "height": settings.imageheight + "px",
+                                "left": settings.left + "px",
+                                "top": settings.top + "px",
+                                "background": "url(" + settings.image + ") ",
+                                "background-size": "100% 100%",
+                                "display": "inline",
+                                "position": "absolute",
+                                "overflow": "hidden"
+                            });
+                            
+            var filename = $('<input class="file">')
+                             .addClass($(self).attr("class"))
+                             .css({
+                                    "position": "absolute",
+                                    "left": 205+"px",
+                                    "top": 2+"px",
+                                    "color": "white",
+                                    "height": 18+"px",
+                                    "background-color": "black",
+                                    "display": "inline",
+                                    "font-size": 10+"px",
+                                    "font-weight": "bold",
+                                    "text-align": "center",
+                                    "border-radius": 15+"px",
+                                    "width": 125+"px"
+                             });
+
+            $(self).before(filename);
+            $(self).wrap(wrapper);
+
+            $(self).css({
+                        "position": "relative",
+                        "height": settings.imageheight + "px",
+                        "width": settings.width + "px",
+                        "display": "inline",
+                        "cursor": "pointer",
+                        "opacity": "0.0"
+                    });
+            var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+            if (is_firefox) {
+                if (/Win/.test(navigator.platform)) {
+                    $(self).css("margin-left", "-142px");                    
+                } else {
+                    $(self).css("margin-left", "-168px");                    
+                };
+            } else {
+                $(self).css("margin-left", settings.imagewidth - settings.width + "px");                
+            };
+
+            $(self).bind("change", function() {
+                var path = $(self).val();
+                var fpath = path.replace("fakepath","...");
+                filename.val(fpath);
+            });
+
+        });
+        
+
+    };
+    
+})(jQuery);

@@ -1,0 +1,502 @@
+@font-face {
+    font-family: star_wars;
+    src: url('fonts/starjedi/Starjedi.ttf');
+}
+
+@font-face {
+    font-family: arcade_classic;
+    src: url('fonts/ARCADECLASSIC.TTF');
+}
+
+body {
+    background-image: url('../img/greyback.jpg');
+    color: white;
+    margin: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.content {
+    display: block;
+    height:100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.footer {
+    width: 100%;
+    height: 100%;
+    background-color : black;
+    background-size: contain;
+}
+
+.header .headerTitle {
+    position: relative;
+    top: 42px;
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 29px;
+    color: #c0ff00;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    font-family: serif;
+}
+
+.footer .footerText {
+    position: relative;
+    top: 22px;
+    transform: translateY(-50%);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    text-align: right;
+}
+
+.dibItem .dibImageHidden {
+    display: none !important;
+    width: 500px;
+    height: 450px;
+    border: 0px;
+}
+
+.dibItem .dibImageShown {
+    display: block !important;
+    width: 500px;
+    height: 450px;
+    border: 0px;
+}
+
+.dibItem .dibImage {
+    width: 500px;
+    height: 450px;
+    border: 0px;
+}
+
+.dibItem .lastDibImage {
+    width: 500px;
+    height: 450px;
+    border: 0px;
+}
+
+.carouselWrapper {
+    height: 550px;
+    width: 900px;
+}
+
+.carouselSlider {
+    border: 1px solid #ccc;
+    background-color: rgba(0,0,0,0.8);
+    width: 500px;
+    height: 640px;
+    padding: 30px;
+    margin: -352.5px 0 0 -275px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*overflow: hidden;*/
+    border-radius: 20px;
+    box-shadow: 0 0 20px #999;
+}
+
+.carousel {
+    display: block;
+    background-color:black;
+    text-align: start;
+    float: none;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    width: 500px;
+    height: 600px;
+    margin: 0px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.addDibtoDibs{
+    float: none;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1000;
+}
+.addDibTextStyle {
+    width: 500px;
+    color: black;
+    float:left ;
+    line-height:30px ;
+    background-color: white;
+    borderTop: 1px solid #ccc;
+    fontSize: 16px;
+    font-weight: bold;
+    text-align: center;
+    height: 29px;
+    cursor: pointer;
+}
+
+.carouselList {
+    text-align: left;
+    float: none;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0px;
+    margin: 0px;
+    height: 800px;
+    width: 500px;
+    padding-top: 420px;
+}
+
+.carouselList div {
+    width: 500px;
+    height: 450px;
+    margin-top: -420px;
+    position: relative;
+}
+
+.carouselList div span {
+    background-color: #666;
+    border-top: 1px solid #ccc;
+    color: white;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    height: 29px;
+    cursor: pointer;
+}
+
+.carouselList div span:hover {
+    background-color: #555;
+}
+
+.carouselList div span.selected {
+    background-color: #600;
+    cursor: default;
+}
+
+.carouselIndexTable {
+    height: 610px;
+    width: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -325px;
+    margin-left: 325px;
+}
+
+
+.carouselSpacingRow {
+    width:100%;
+    height:10px;
+}
+
+.carouselSpacingColumn {
+    width:5px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+.carouselIndexLetter {
+    color:white;
+    -moz-box-shadow:inset 0px 1px 0px 0px #eeeeee;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #eeeeee;
+    box-shadow:inset 0px 1px 0px 0px #eeeeee;
+    background: black;
+    font-family: Tahoma;
+    text-align: center;
+    border-radius: 160px 160px 160px 160px;
+    -moz-border-radius: 160px 160px 160px 160px;
+    -webkit-border-radius: 160px 160px 160px 160px;
+    border: 2px solid white;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow:inset 0px 1px 0px 0px #9acc85;
+}
+
+
+.carouselIndexLetter .selected{
+    background-color: blue;
+}
+
+.tradeSelectUser {
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.matrixContainer {
+    width: 200px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    border-radius: 10px;
+}
+.tradeSelectUserBox{
+    width: 160px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    color: black;
+}
+.floatingContent {
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 160px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.dibToAddName {
+    width: 145px;
+    height: 25px;
+    padding-bottom: 10px;
+    background: transparent;
+    border: none;
+    line-height: 25px;
+    color: black;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+}
+
+.dibToAddName::-webkit-input-placeholder {
+    color: #000000;
+}
+
+.dibToAddName:-moz-placeholder { /* Firefox 18- */
+    color: #000000;
+}
+
+.dibToAddName::-moz-placeholder {  /* Firefox 19+ */
+    color: #000000;
+}
+
+.dibToAddName:-ms-input-placeholder {
+    color: #000000;
+}
+.dibToAddName:focus {
+    outline: none;
+}
+.dibAddedName {
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    color: black;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+}
+
+.addNewButton {
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+}
+
+
+
+.userLabel {
+    color:white;
+    text-align:center;
+    border-bottom: 1px solid #ffffff ;
+    width:100%;
+}
+
+.homeButton {
+    height: 60px;
+    width: 60px;
+    background-size: 100%;
+    margin-left: 230px;
+    margin-top: 6px;
+    z-index: 15000;
+    position: absolute;
+    top: 625px;
+}
+
+.userSelectPanel
+{
+    display : none;
+    background-color: darkblue;
+    width: 500px;
+    height: 600px;
+    font-family: arcade_classic;
+    font-size: 12px;
+    color: white;
+}
+
+.userSelectHText
+{
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 32px;
+    padding-top: 32px;
+}
+
+.userSelectPText
+{
+    font-size: 24px;
+    padding: 15px;
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+.dibUser
+{
+    background-color: black;
+    border: 3px solid white;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.dibUser:active
+{
+    background-color: orange !important;
+}
+
+.dibUser:hover
+{
+     background-color: rgba(0,0,0,0.7);
+}
+
+.addDibInput
+{
+    width: 500px;
+    height: 25px;
+    display: none;
+    background-color: white;
+    float: none;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1000;
+}
+
+.inputDibName
+{
+    position: absolute;
+    top: 2px;
+    right: auto;
+    bottom: auto;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    left: 2px;
+    width: 175px;
+    /* color: black; */
+    float: left;
+    line-height: 24px;
+    /* background-color: white; */
+    fontSize: 16px;
+    font-weight: bold;
+    text-align: center;
+    height: 20px;
+    /* border: none; */
+    padding: 0px;
+}
+
+.addDibImage
+{
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 205px;
+    width: 1500px;
+    height: 24px;
+    border: none;
+    padding: 0px;
+}
+
+.submitDibs
+{
+    position: absolute;
+    top: 2px;
+    right: auto;
+    bottom: auto;
+    left: 400px;
+    width: 70px;
+    height: 22px;
+    cursor: pointer;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: #FFF;
+    font-weight: lighter;
+    border: 1px solid #CCC;
+    padding: 2.5px 15px;
+    background: rgb(101,175,232);
+    background: -moz-linear-gradient(top, rgba(101,175,232,1) 0%, rgba(49,113,193,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(101,175,232,1)), color-stop(100%,rgba(49,113,193,1)));
+    background: -webkit-linear-gradient(top, rgba(101,175,232,1) 0%,rgba(49,113,193,1) 100%);
+    background: -o-linear-gradient(top, rgba(101,175,232,1) 0%,rgba(49,113,193,1) 100%);
+    background: -ms-linear-gradient(top, rgba(101,175,232,1) 0%,rgba(49,113,193,1) 100%);
+    background: linear-gradient(top, rgba(101,175,232,1) 0%,rgba(49,113,193,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65afe8', endColorstr='#3171c1',GradientType=0 );
+}
+
+.submitDibs:hover
+{   position: absolute;
+    top: 2px;
+    right: auto;
+    bottom: auto;
+    left: 400px;
+    width: 70px;
+    height: 22px;
+    cursor: pointer;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: #FFF;
+    font-weight: 500;
+    -webkit-box-shadow: 0px 0px 5px #CCC;
+    -moz-box-shadow: 0px 0px 5px #CCC;
+    box-shadow: 0px 0px 5px #CCC;
+    padding: 2.5px 15px;
+    position: relative;
+    background: rgb(62,158,229);
+    background: -moz-linear-gradient(top, rgba(62,158,229,1) 0%, rgba(23,103,202,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(62,158,229,1)), color-stop(100%,rgba(23,103,202,1)));
+    background: -webkit-linear-gradient(top, rgba(62,158,229,1) 0%,rgba(23,103,202,1) 100%);
+    background: -o-linear-gradient(top, rgba(62,158,229,1) 0%,rgba(23,103,202,1) 100%);
+    background: -ms-linear-gradient(top, rgba(62,158,229,1) 0%,rgba(23,103,202,1) 100%);
+    background: linear-gradient(top, rgba(62,158,229,1) 0%,rgba(23,103,202,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e9ee5', endColorstr='#1767ca',GradientType=0 ); /*box-shadow*/
+    -webkit-box-shadow: inset 0 0 3px #666;
+    -moz-box-shadow: inset 0 0 3px #666;
+    box-shadow: inset 0 0 3px #666;
+}
+
+.deleteButton
+{
+    position: absolute;
+    top: 2px;
+    left : 475px;
+    height : 23px;
+    width: 23px;
+}
+
+.dibUserName
+{
+    font-size: 24px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}

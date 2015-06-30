@@ -1,0 +1,11 @@
+{
+    "dibs":
+        [
+            {"dibName" : "Kareena Kapoor" , "imageName" : "Kareena.jpg"},
+            {"dibName" : "Scarlett Johansson" , "imageName" : "Scarlett.jpg"},
+            {"dibName" : "Zooey Deschanel" , "imageName" : "Zooey.jpg"},
+            {"dibName" : "The Witch King" , "imageName" : "witchking.png"},
+            {"dibName" : "Frozen Mountains" , "imageName" : "frozen.jpg"}
+
+        ]
+}
